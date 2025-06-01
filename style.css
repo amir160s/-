@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	margin: 0;
+}
+body{
+    width: 100%;
+}
+.products .row {
+    /* Ensure no extra spacing that breaks alignment */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    height: 100%; /* Let the card take full height of the column */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keep spacing consistent */
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .product-card .image {
+    max-width: 100%;
+    height: 180px; /* fixed image height for consistency */
+    object-fit: cover; /* maintain aspect ratio & cover the box */
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .product-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    color: #333;
+    flex-grow: 1; /* Let name take available space */
+  }
+  
+  .product-price {
+    color: #28a745;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+  
+  .footerPart {
+    background-color: #222;
+    color: #ccc;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid #444;
+  }
+  
+  .footerPart p {
+    margin: 0;
+  }
+  
+  .social-icon {
+    color: #ddd;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #28a745;
+  }
+.advertizement{
+    width: 100%;
+    
+}
+  
+/*-----------------Chatbot-----------------------*/
