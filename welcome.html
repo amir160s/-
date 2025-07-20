@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome | গরুর হাট</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="goruHat.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styleW.css">
+</head>
+<body>
+  <div class="welcome-container">
+    <div class="welcome-overlay"></div>
+    <div class="welcome-content">
+      <h1 class="welcome-title">গরুর হাটে স্বাগতম</h1>
+      <p class="welcome-subtitle">বাংলাদেশের সবচেয়ে বড় অনলাইন গরু বাজার</p>
+      
+      <div class="auth-options">
+        <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#loginModal">
+          <i class="fas fa-sign-in-alt"></i> লগইন করুন
+        </button>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">
+          <i class="fas fa-user-plus"></i> রেজিস্টার করুন
+        </button>
+        <a href="index.html" class="btn btn-default btn-lg">
+          <i class="fas fa-eye"></i> গেস্ট হিসেবে ব্রাউজ করুন
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="signupForm">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">রেজিস্টার করুন</h4>
+          </div>
+          <div class="modal-body">
+            <div id="signupAlert" class="alert" style="display:none;"></div>
+            <div class="form-group">
+              <label>পূর্ণ নাম</label>
+              <input type="text" name="fullName" class="form-control" placeholder="আপনার নাম লিখুন" required>
+            </div>
+            <div class="form-group">
+              <label>ইমেইল ঠিকানা</label>
+              <input type="email" name="email" class="form-control" placeholder="example@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>মোবাইল নাম্বার</label>
+              <input type="tel" name="phone" class="form-control" placeholder="01XXXXXXXXX" required>
+            </div>
+            <div class="form-group">
+              <label>পাসওয়ার্ড</label>
+              <input type="password" name="password" class="form-control" placeholder="পাসওয়ার্ড দিন" required>
+            </div>
+            <div class="form-group">
+              <label>পাসওয়ার্ড নিশ্চিত করুন</label>
+              <input type="password" name="confirmPassword" class="form-control" placeholder="পাসওয়ার্ড আবার লিখুন" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">রেজিস্টার করুন</button>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">ইতিমধ্যে অ্যাকাউন্ট আছে? লগইন করুন</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">বন্ধ করুন</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="loginForm">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">লগইন করুন</h4>
+          </div>
+          <div class="modal-body">
+            <div id="loginAlert" class="alert" style="display:none;"></div>
+            <div class="form-group">
+              <label>ইমেইল বা মোবাইল নাম্বার</label>
+              <input type="text" name="loginId" class="form-control" placeholder="ইমেইল বা মোবাইল নাম্বার লিখুন" required>
+            </div>
+            <div class="form-group">
+              <label>পাসওয়ার্ড</label>
+              <input type="password" name="password" class="form-control" placeholder="পাসওয়ার্ড দিন" required>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="remember"> আমাকে মনে রাখুন</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">লগইন করুন</button>
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">অ্যাকাউন্ট নেই? রেজিস্টার করুন</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">বন্ধ করুন</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
